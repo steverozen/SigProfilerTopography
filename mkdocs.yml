@@ -1,0 +1,67 @@
+site_name: SigProfilerTopography
+repo_name: SigProfilerSuite/SigProfilerTopography
+repo_url: https://github.com/SigProfilerSuite/SigProfilerTopography
+
+docs_dir: docs
+site_url: https://sigprofilersuite.github.io/SigProfilerTopography/
+
+not_in_nav: |
+  home.md
+
+use_directory_urls: false
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - '1. Installation': '1. Installation.md'
+      - '2. Quick Start Example': '2. Quick Start Example.md'
+  - Using The Tool:
+      - '3. Using the Tool - Input': '3. Using the Tool - Input.md'
+      - '4. Using the Tool - Output': '4. Using the Tool - Output.md'
+  - Output:
+      - '5. Output - Nucleosome Occupancy': '5. Output - Nucleosome Occupancy.md'
+      - '6. Output - Replication Timing': '6. Output - Replication Timing.md'
+      - '7. Output - Strand Asymmetry': '7. Output - Strand Asymmetry.md'
+      - '8. Output - Epigenomics Analysis': '8. Output - Epigenomics Analysis.md'
+      - '9. Output - Strand-coordinated Mutagenesis': '9. Output - Strand-coordinated Mutagenesis.md'
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+hooks:
+  - mkdocs_hooks.py

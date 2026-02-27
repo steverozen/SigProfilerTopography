@@ -10,7 +10,7 @@
 
 # SigProfilerTopography
 
-SigProfilerTopography allows evaluating the effect of chromatin organization, histone modifications, transcription factor binding, DNA replication, and DNA transcription on the activities of different mutational processes. SigProfilerTopography elucidates the unique topographical characteristics of mutational signatures. The tool seamlessly integrates with other SigProfiler tools including SigProfilerMatrixGenerator, SigProfilerSimulator, and SigProfilerAssignment. Detailed documentation can be found at: https://osf.io/5unby/wiki/home/
+SigProfilerTopography allows evaluating the effect of chromatin organization, histone modifications, transcription factor binding, DNA replication, and DNA transcription on the activities of different mutational processes. SigProfilerTopography elucidates the unique topographical characteristics of mutational signatures. The tool seamlessly integrates with other SigProfiler tools including SigProfilerMatrixGenerator, SigProfilerSimulator, and SigProfilerAssignment. Detailed documentation can be found at: https://sigprofilersuite.github.io/SigProfilerTopography/
 
 SigProfilerTopography provides topography analyses for mutations such as
 
