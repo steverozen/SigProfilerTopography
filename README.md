@@ -542,5 +542,5 @@ See [LICENSE.txt](./LICENSE.txt) for the full text.
 
 
 ## <a name="contact"></a> Contact Information
-Please address any queries or bug reports to Burcak Otlu at burcakotlu@eng.ucsd.edu
+Please address any queries or bug reports to Burcak Otlu at burcako@metu.edu.tr
 
