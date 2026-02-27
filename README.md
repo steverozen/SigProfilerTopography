@@ -250,7 +250,7 @@ View the table below for the full list of `runAnalyses` parameters.
 
 
 **SigProfilerTopography Output**
-To learn about the output, please visit https://osf.io/5unby/wiki/home/
+To learn about the output, please visit https://sigprofilersuite.github.io/SigProfilerTopography/
   
 
 
