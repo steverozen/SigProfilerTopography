@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 SigProfilerTopography (SPT) is a Python package for analyzing the topography of mutational signatures in cancer genomes. It is part of the SigProfiler suite and analyzes mutations with respect to nucleosome occupancy, epigenomics occupancy, replication timing, strand asymmetry, and strand-coordinated mutagenesis. Supports SBS, DBS, and ID mutation types on GRCh37, GRCh38, mm9, and mm10 genomes.
 
+## Git Workflow
+
+Always push to `origin` (`steverozen/SigProfilerTopography`), never to `upstream` (`SigProfilerSuite/SigProfilerTopography`) — no write access to upstream.
+
 ## Build and Install
 
 ```bash
