@@ -419,6 +419,7 @@ MM9 = 'mm9'
 MM10 = 'mm10'
 GRCh37 = 'GRCh37'
 GRCh38 = 'GRCh38'
+CE11 = "c_elegans"
 
 FIXED_STEP = 'fixedStep'
 VARIABLE_STEP = 'variableStep'
@@ -490,6 +491,7 @@ GRCh37ChromSizesDictFilename = 'hg19ChromSizesDict.txt'
 GRCh38ChromSizesDictFilename = 'hg38ChromSizesDict.txt'
 MM9ChromSizesDictFilename = 'mm9ChromSizesDict.txt'
 MM10ChromSizesDictFilename = 'mm10ChromSizesDict.txt'
+CE11ChromSizesDictFilename = 'ce11.chrom.sizes'
 
 INDELBASED = 'indelbased'
 SIGNATUREBASED = 'signaturebased'
@@ -1941,6 +1943,8 @@ def getChromSizesDict(genome):
         chromSizesDictPath = os.path.join(current_abs_path, ONE_DIRECTORY_UP, ONE_DIRECTORY_UP, LIB, UCSCGENOME, MM9ChromSizesDictFilename)
     elif (genome == MM10):
         chromSizesDictPath = os.path.join(current_abs_path, ONE_DIRECTORY_UP, ONE_DIRECTORY_UP, LIB, UCSCGENOME, MM10ChromSizesDictFilename)
+    elif (genome == CE11):
+        chromSizesDictPath = os.path.join(current_abs_path, ONE_DIRECTORY_UP, ONE_DIRECTORY_UP, LIB, UCSCGENOME, CE11ChromSizesDictFilename)
 
     if (os.path.exists(chromSizesDictPath)):
         chromSizesDict = readDictionary(chromSizesDictPath)
@@ -2206,7 +2210,7 @@ def fill_signature_cutoff_properties_df(outputDir,
 
             for cutoff_index, cutoff in enumerate(cutoffs):
                 num_of_mutations_array = chrBased_mutation_df[signatures].ge(float(cutoff)).sum().to_numpy()
-                all_num_of_mutations_array[cutoff_index] += num_of_mutations_array
+                all_num_of_mutations_array[cutoff_index] += num_of_mutations_array.astype(np.int64)
 
                 sum_of_probabilities_array = (chrBased_mutation_df[chrBased_mutation_df[signatures] >= float(cutoff)])[signatures].sum().to_numpy()
                 all_sum_of_probabilities_array[cutoff_index] += sum_of_probabilities_array

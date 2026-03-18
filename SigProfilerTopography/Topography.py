@@ -2619,16 +2619,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
     ########### Step4 Merge chrom based matrix generator generated files with probabilities ends ######################
     ###################################################################################################################
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
 
     #######################################################################################################
     ################################### Step5 Fill Table Starts ###########################################
@@ -2982,16 +2972,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
     ################################### Step5 Fill Table ends #############################################
     #######################################################################################################
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
 
     ###################################################################################################################
     ################################################# All Steps ends ##################################################
@@ -3086,18 +3066,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
         job_tuples = []
 
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
-
-
     if (nucleosome):
         print('\n--- Nucleosome occupancy analysis')
 
@@ -3145,17 +3113,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
         print('#################################################################################\n', file=log_out)
         log_out.close()
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
-
 
     if (replication_time):
         print('\n--- Replication timing analysis')
@@ -3198,18 +3155,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
         print("--- Run Replication Timing Analysis: %f minutes --- %s" %(float((time.time()-start_time)/60),computation_type), file=log_out)
         print('#################################################################################\n', file=log_out)
         log_out.close()
-
-
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
 
 
     if replication_strand_bias:
@@ -3299,17 +3244,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
         print('#################################################################################\n', file=log_out)
         log_out.close()
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
-
 
     if (processivity):
         print('\n--- Strand-coordinated mutagenesis analysis')
@@ -3343,16 +3277,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
         print('#################################################################################\n', file=log_out)
         log_out.close()
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
 
     if (epigenomics):
         print('\n--- Epigenomics occupancy analysis')
@@ -3500,16 +3424,6 @@ def runAnalyses(genome, # [String] The reference genome used for the topography 
             except OSError as e:
                 print('Error: %s - %s.' % (e.filename, e.strerror))
 
-    #######################################################################################################
-    # delete later debug starts
-    filename = '%s_%s_for_topography.txt' % ('chr1', SBS)
-    chrBasedMutationDFFilePath = os.path.join(outputDir, jobname, DATA, CHRBASED, filename)
-    if os.path.exists(chrBasedMutationDFFilePath):
-        df = pd.read_csv(chrBasedMutationDFFilePath, sep='\t')
-    else:
-        print(chrBasedMutationDFFilePath)
-    # delete later debug ends
-    #######################################################################################################
 
     if region_analysis:
 
