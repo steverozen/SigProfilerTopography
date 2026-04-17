@@ -30,3 +30,8 @@ __pycache__/
 SigProfilerTopography.egg-info/
 .idea
 .DS_Store
+.vscode/
+
+# Local dev reference materials (binaries, not for git)
+dev_notes/*.pdf
+dev_notes/*.html
