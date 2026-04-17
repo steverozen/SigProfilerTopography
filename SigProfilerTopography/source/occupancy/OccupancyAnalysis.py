@@ -3263,6 +3263,7 @@ def occupancyAnalysis(genome,
                         verbose):
 
     log_out = open(log_file, 'a')
+
     if (os.path.basename(library_file_with_path) not in SIGPROFILERTOPOGRAPHY_DEFAULT_FILES) and (not os.path.exists(library_file_with_path)):
         print('There is no such file under %s' %(library_file_with_path), file=log_out)
 
